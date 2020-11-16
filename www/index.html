@@ -14,7 +14,13 @@
       var TestClass=ncmb.DataStore("RegusterTest2");
       var testRecord=new TestClass();
       testRecord.set("massage2","hello,world");
-      testRecord.save();
+      testRecord.save()
+      .then(function(m){
+        alert("success:"+JSON,stringify(m));
+      })
+      .catch(function(m){
+        alert("fail:"+JSON,stringify(m));
+      })
     </script>
 </head>
 <body>
